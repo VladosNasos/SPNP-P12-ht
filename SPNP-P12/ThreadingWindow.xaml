@@ -4,8 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SPNP_P12"
-        mc:Ignorable="d"
-        Title="ThreadingWindow" Height="450" Width="800">
+         mc:Ignorable="d"
+        Closed="Window_Closed"
+        Title="ThreadingWindow" Height="500" Width="420" WindowStartupLocation="CenterScreen">
+
     <StackPanel HorizontalAlignment="Center">
         <TextBlock Text="Многопоточность" FontSize="18" Margin="5 5 0 5"/>
 

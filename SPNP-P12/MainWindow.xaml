@@ -4,13 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SPNP_P12"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="300">
+         mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="300" WindowStartupLocation="CenterScreen">
 
     <StackPanel>
         <TextBlock FontSize="17" FontWeight="Bold" HorizontalAlignment="Center">Системное программирование</TextBlock>
         <Button x:Name="ThreadingBtn" Content="Многопоточность" Margin="20,8" Click="ThreadingBtn_Click"/>
         <Button x:Name="SynchroBtn" Content="Синхронизация" Margin="20,8" Click="SynchroBtn_Click"/>
+        <Button x:Name="TaskBtn" Content="Многозадачность" Margin="20,8" Click="TaskBtn_Click"/>
+        <Button x:Name="CancellingBtn" Content="Отмена задачы" Margin="20,8" Click="CancellingBtn_Click"/>
+        <Button x:Name="ProcessBtn" Content="Процессы" Margin="20,8" Click="ProcessBtn_Click"/>
+        <Button x:Name="ChainingBtn" Content="Нитки. Продолжение" Margin="20,8" Click="ChainingBtn_Click"/>
     </StackPanel>
 
 </Window>

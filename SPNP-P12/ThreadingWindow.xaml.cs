@@ -17,10 +17,37 @@ namespace SPNP_P12
 {
     public partial class ThreadingWindow : Window
     {
+        private static Mutex? mutex;
+        private static string mutexName = "TW_MUTEX";
+
         public ThreadingWindow()
         {
+            CheckPreviousLunch();
             InitializeComponent();
         }
+
+        private void CheckPreviousLunch()
+        {
+            // перенести в MainWindow
+            try { mutex = Mutex.OpenExisting(mutexName); } catch { }  // пытаемся открыть
+
+            if (mutex is null)  // первый запуск экземпляра окна
+            {
+                mutex = new Mutex(true, mutexName);  // создаём
+            }
+            else if (!mutex.WaitOne(1))  // если mutex закрыт
+            {
+                MessageBox.Show("Экземпляр окна уже запущен!");
+                throw new ApplicationException();
+            }
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            mutex?.ReleaseMutex();  // освобождаем
+        }
+
+
 
         #region BTN1 Без потоков
         private void BtnStart1_Click(object sender, RoutedEventArgs e)
@@ -34,6 +61,11 @@ namespace SPNP_P12
             }
             // обновление окна - это тоже одна с событий, поэтому бегунок
             // отображается сразу заполнением, а не пошагово (в цикле)
+        }
+
+        internal static void Sleep(int v)
+        {
+            throw new NotImplementedException();
         }
 
         private void BtnStop1_Click(object sender, RoutedEventArgs e)

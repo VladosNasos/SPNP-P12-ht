@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SPNP_P12
+
 {
     public partial class MainWindow : Window
     {
@@ -25,14 +26,42 @@ namespace SPNP_P12
         private void ThreadingBtn_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-            new ThreadingWindow().ShowDialog();
+            try { new ThreadingWindow().ShowDialog(); } catch { }
             Show();
         }
 
         private void SynchroBtn_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-            new SynchroWindow().ShowDialog();
+            try { new SynchroWindow().ShowDialog(); } catch { }
+            Show();
+        }
+
+        private void TaskBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            new TaskWindow().ShowDialog();
+            Show();
+        }
+
+        private void CancellingBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            new CancelWindow().ShowDialog();
+            Show();
+        }
+
+        private void ProcessBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            try { new ProcessWindow().ShowDialog(); } catch { }
+            Show();
+        }
+
+        private void ChainingBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            try { new ChainingWindow().ShowDialog(); } catch { }
             Show();
         }
     }
