@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SPNP_P12"
         mc:Ignorable="d"
-        Title="CountDownWindow" Height="450" Width="800">
+        Title="CountDownWindow" Height="100" Width="350">
     <StackPanel Margin="5" VerticalAlignment="Center">
         <TextBlock HorizontalAlignment="Center" FontWeight="SemiBold" Margin="5">Закройте другое окно или это автоматически закроется</TextBlock>
         <ProgressBar x:Name="progressBar1" Height="25" Margin="5" Value="100"/>

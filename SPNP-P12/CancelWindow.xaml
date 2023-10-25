@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SPNP_P12"
         mc:Ignorable="d"
-        Title="CancelWindow" Height="450" Width="800">
+        Title="CancelWindow" Height="550" Width="400" WindowStartupLocation="CenterScreen">
     <StackPanel>
         <Label Content="Отмена задач" FontSize="18" Margin="0 0 0 10" HorizontalAlignment="Center"/>
 
@@ -41,6 +41,9 @@
             </StackPanel>
             <Button Content="Stop" x:Name="StopBtn3" Click="StopBtn3_Click"/>
         </StackPanel>
+
+        <Button Content="START1" x:Name="StartBtnTest1" Click="StartBtnTest1_Click" Width="352"/>
+        <Button Content="START2" x:Name="StartBtnTest2" Click="StartBtnTest2_Click" Width="352"/>
 
     </StackPanel>
 
